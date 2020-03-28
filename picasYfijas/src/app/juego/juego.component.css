@@ -1,0 +1,43 @@
+.navNumber{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 0;
+}
+.botn{
+    margin-left: 3rem;
+}
+.tabla{
+    width: 42rem;
+    margin-left: 15.5rem;
+}
+.items{
+    display: flex;
+    justify-content: center;
+}
+.campo{
+    margin-right: 1rem;
+    background-color: #e6e6e6;
+    border-radius: 9rem;
+    text-align: center;
+}
+.campo:last-child{
+    margin-right: 0;
+}
+.icon{
+    font-size: 3rem; color:#9b9b9b;
+}
+.iconl{
+    font-size: 3rem; color:#9b9b9b; padding-right: 9rem; margin-left: 4rem;
+}
+.icon:hover{
+    color: #721515;
+}
+.iconl:hover{
+    color: #721515;
+}

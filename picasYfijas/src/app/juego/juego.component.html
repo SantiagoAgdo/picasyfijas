@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="ml-5 navNumber">
+        <form class="example-form" [formGroup]="datos" novalidate>
+            <mat-form-field class="animated bounceInDown campo">
+              <input matInput placeholder="---" formControlName="num1" value="0">
+            </mat-form-field>
+            <mat-form-field class="animated bounceInDown campo">
+              <input matInput placeholder="---" formControlName="num2" value="0">
+            </mat-form-field>
+            <mat-form-field class="animated bounceInDown campo">
+              <input matInput placeholder="---" formControlName="num3" value="0">
+            </mat-form-field>
+            <mat-form-field class="animated bounceInDown campo">
+              <input matInput placeholder="---" formControlName="num4" value="0">
+            </mat-form-field>
+          </form>
+    </div>
+    <div>
+      <div class="boton">
+        <button class=" botn btn btn-dark rounded-pill animated zoomIn" (click)="sen()"> Ingresar Numero </button>
+      </div>
+    </div>
+    <div class="animated zoomIn fast tabla">
+      <table class="table table-striped container">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">numeros</th>
+            <th scope="col">picas</th>
+            <th scope="col">fijas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of json">
+            <td>{{item.n1}}</td>
+            <td>{{item.n2}}</td>
+            <td>{{item.n3}}</td>
+            <td>{{item.n4}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-center py-5">
+      <div>
+        <a>
+          <i class="animated bounceInLeft iconl fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+      <div>
+        <a>
+          <i class="animated bounceInRight icon fas fa-sync-alt"></i>
+        </a>
+      </div>
+    </div>
+</div>
