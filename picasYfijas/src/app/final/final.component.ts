@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./final.component.css']
 })
 export class FinalComponent implements OnInit {
-
+  resultado: string = "Ganaste";
+  frase: string = "Bien lo lograste el numero era: "
+  numero:number = 3569;
   constructor() { }
 
   ngOnInit() {

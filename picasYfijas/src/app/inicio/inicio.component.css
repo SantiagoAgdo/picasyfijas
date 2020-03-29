@@ -1,16 +1,16 @@
-h1{
+h1 {
     font-family: 'Spicy Rice', cursive;
     display: flex;
     font-size: 6rem;
     justify-content: center;
     margin-top: 2rem;
 }
-.boton{
+.boton {
     display: flex;
     justify-content: center;
     padding: 20rem;
 }
-button{
+button {
     width: 13rem;
     height: 3.5rem;
     border-radius: 3rem;
@@ -18,4 +18,26 @@ button{
     font-family: 'Anton', sans-serif;
     font-size: 25px;
 }
-
+@media(max-width: 400px) {
+    h1 {
+        font-family: 'Spicy Rice', cursive;
+        display: flex;
+        font-size: 8rem;
+        justify-content: center;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .boton {
+        display: flex;
+        justify-content: center;
+        padding: 3rem;
+    }
+    button {
+        width: 13rem;
+        height: 3.5rem;
+        border-radius: 3rem;
+        font-family: 'Spicy Rice', cursive;
+        font-family: 'Anton', sans-serif;
+        font-size: 25px;
+    }
+}

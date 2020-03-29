@@ -3,18 +3,28 @@
     justify-content: center;
     padding: 3rem;
 }
+@media(max-width: 400px) {
+    .navNumber{
+        display: flex;
+        padding: 3rem;
+    }
+}
 .boton{
     display: flex;
     justify-content: center;
     padding: 2rem;
     padding-top: 0;
 }
-.botn{
-    margin-left: 3rem;
-}
+
 .tabla{
     width: 42rem;
-    margin-left: 15.5rem;
+    margin-left: 13.7rem;
+}
+@media(max-width: 400px){
+    .tabla{
+        width: 15rem;
+        margin-left: 3rem;
+    }
 }
 .items{
     display: flex;
@@ -29,15 +39,52 @@
 .campo:last-child{
     margin-right: 0;
 }
+@media(max-width: 400px){
+    .campo{
+        width: 2.5rem;
+        margin-right: 1rem;
+        background-color: #e6e6e6;
+        border-radius: 9rem;
+        text-align: center;
+    }
+    .campo:last-child{
+        margin-right: 0;
+    }
+}
 .icon{
     font-size: 3rem; color:#9b9b9b;
 }
 .iconl{
-    font-size: 3rem; color:#9b9b9b; padding-right: 9rem; margin-left: 4rem;
+    font-size: 3rem; color:#9b9b9b; padding-right: 9rem;
 }
 .icon:hover{
     color: #721515;
 }
 .iconl:hover{
     color: #721515;
+}
+.foo{
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    margin-right: 1rem;
+}
+footer{
+    display: block;
+    position: fixed;
+    color: #9b9b9b;
+    bottom: 0;
+    margin: auto;
+}
+@media(max-width:400px){
+    .foo{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+.contac{
+    text-decoration: none;
+    color: #9b9b9b;
 }
