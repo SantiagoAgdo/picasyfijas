@@ -1,90 +1,117 @@
-.navNumber{
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.navNumber {
     display: flex;
     justify-content: center;
     padding: 3rem;
 }
+
 @media(max-width: 400px) {
-    .navNumber{
+    .navNumber {
         display: flex;
         padding: 3rem;
     }
 }
-.boton{
+
+.boton {
     display: flex;
     justify-content: center;
     padding: 2rem;
     padding-top: 0;
 }
 
-.tabla{
+.tabla {
     width: 42rem;
     margin-left: 13.7rem;
 }
-@media(max-width: 400px){
-    .tabla{
+
+@media(max-width: 400px) {
+    .tabla {
         width: 15rem;
         margin-left: 3rem;
     }
 }
-.items{
+
+.items {
     display: flex;
     justify-content: center;
 }
-.campo{
+
+.campo {
     margin-right: 1rem;
     background-color: #e6e6e6;
     border-radius: 9rem;
     text-align: center;
 }
-.campo:last-child{
+
+.campo:last-child {
     margin-right: 0;
 }
-@media(max-width: 400px){
-    .campo{
+
+@media(max-width: 400px) {
+    .campo {
         width: 2.5rem;
         margin-right: 1rem;
         background-color: #e6e6e6;
         border-radius: 9rem;
         text-align: center;
     }
-    .campo:last-child{
+    .campo:last-child {
         margin-right: 0;
     }
 }
-.icon{
-    font-size: 3rem; color:#9b9b9b;
+
+.icon {
+    font-size: 3rem;
+    color: #9b9b9b;
 }
-.iconl{
-    font-size: 3rem; color:#9b9b9b; padding-right: 9rem;
+
+.iconl {
+    font-size: 3rem;
+    color: #9b9b9b;
+    padding-right: 9rem;
 }
-.icon:hover{
+
+.icon:hover {
     color: #721515;
 }
-.iconl:hover{
+
+.iconl:hover {
     color: #721515;
 }
-.foo{
+
+.foo {
     display: flex;
     justify-content: flex-end;
     bottom: 0;
     margin-right: 1rem;
 }
-footer{
+
+footer {
     display: block;
     position: fixed;
     color: #9b9b9b;
     bottom: 0;
     margin: auto;
 }
-@media(max-width:400px){
-    .foo{
+
+@media(max-width:400px) {
+    .foo {
         display: none;
     }
-    footer{
+    footer {
         display: none;
     }
 }
-.contac{
+
+.contac {
     text-decoration: none;
     color: #9b9b9b;
 }

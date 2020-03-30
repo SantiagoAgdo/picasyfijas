@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/599e77fa-1981-4623-885f-54d175781ccf/resourceGroups/picasfijas/providers/Microsoft.Web/sites/PicasFijas",
+    "appService.deploySubpath": "picasYfijas\\dist\\picasYfijas"
+}

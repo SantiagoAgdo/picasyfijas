@@ -18,20 +18,20 @@ export class JuegoComponent implements OnInit {
   numeroAleatorio2: number;
   numeroAleatorio3: number;
   numeroAleatorio4: number;
-  num1: any;
-  num2: any;
-  num3: any;
-  num4: any;
+  num1: number;
+  num2: number;
+  num3: number;
+  num4: number;
   datos: any = {};
   data = new registro;
   iterador: number = 1;
   numeroAleatorioCompleto: any;
-  numeroCompleto: any;
+  numeroCompleto: string;
   disableButton: boolean = false;
   json = [
     {
       "iteracion": 0,
-      "numero": 0,
+      "numero": "",
       "pica": 0,
       "fija": 0
     }
@@ -56,8 +56,6 @@ export class JuegoComponent implements OnInit {
   }
   ngOnInit() {
     this.asignacionDeNumeros();
-    console.log(this.numeroAleatorio1, this.numeroAleatorio2, this.numeroAleatorio3, this.numeroAleatorio4);
-
     this.numeroAleatorioCompleto = `${this.numeroAleatorio1}${this.numeroAleatorio2}${this.numeroAleatorio3}${this.numeroAleatorio4}`
   }
 
@@ -66,24 +64,32 @@ export class JuegoComponent implements OnInit {
     let fijas: number;
     this.numeroCompleto = `${this.num1}${this.num2}${this.num3}${this.num4}`;
     fijas = this.fijas(this.num1, this.num2, this.num3, this.num4);
-    picas = (this.picas(this.num1, this.num2, this.num3, this.num4))-fijas;
+    picas = (this.picas(this.num1, this.num2, this.num3, this.num4)) - fijas;
     if (this.num1 == undefined && this.num2 == undefined && this.num3 == undefined && this.num4 == undefined) {
-      this.numeroCompleto = "0000"
+      this.numeroCompleto = ""
     }
     if (!this.disableButton) {
-      if (this.flag) {
-        this.json[0] = { "iteracion": this.iterador, "numero": this.numeroCompleto, "pica": picas, "fija": fijas };
-        this.flag = false;
-        this.iterador++;
+      if (this.numeroCompleto.length == 4) {
+        if (this.flag) {
+          this.json[0] = { "iteracion": this.iterador, "numero": this.numeroCompleto, "pica": picas, "fija": fijas };
+          this.flag = false;
+          this.iterador++;
+        } else {
+          this.json.push({ "iteracion": this.iterador, "numero": this.numeroCompleto, "pica": picas, "fija": fijas });
+          this.iterador++;
+        }
       } else {
-        this.json.push({ "iteracion": this.iterador, "numero": this.numeroCompleto, "pica": picas, "fija": fijas });
-        this.iterador++;
+        swal.fire({
+          icon: 'error',
+          title: 'Oops... ',
+          text: 'Te falta uno o mas numeros'
+        })
       }
     }
-    this.datos.get('num1').setValue(0);
-    this.datos.get('num2').setValue(0);
-    this.datos.get('num3').setValue(0);
-    this.datos.get('num4').setValue(0);
+    this.datos.get('num1').setValue();
+    this.datos.get('num2').setValue();
+    this.datos.get('num3').setValue();
+    this.datos.get('num4').setValue();
     if (fijas == 4) {
       swal.fire({
         title: `Ganaste!`,
@@ -122,7 +128,6 @@ export class JuegoComponent implements OnInit {
         ) { }
       })
     }
-    console.log(this.json);
   }
   fijas(n1: number, n2: number, n3: number, n4: number): number {
     let fijasCount: number = 0;
